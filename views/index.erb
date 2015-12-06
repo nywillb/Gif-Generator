@@ -1,0 +1,52 @@
+<doctype html>
+<html>
+
+  <head>
+    <title>Wotify</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </head>
+
+
+
+  <!-- THIS IS THE BODY OF THE PAGE -->
+  <body>
+    <div class="container">
+
+      <!-- Navigation Bar, this is using an HTML5 semantic tag -->
+      <nav class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">Wotify</a>
+      </nav>
+
+      <%@songs.each do |song|%>
+      <div class="row"> <!-- This is one ROW on the page-->
+
+        <div class="col-md-4"> <!-- This one COLUMN in the ROW -->
+          <img src="<%=song.albumArt%>" width="350px" height="350px">
+        </div> <!-- THIS CLOSES THE FIRST COLUMN -->
+
+        <div class="col-md-4"> <!-- ooooo, this is another COLUMN in the ROW -->
+          <!-- SONG INFO -->
+          <p id="album"><%=song.album%></p>
+          <p id="song"><%=song.name%></p>
+          <p id="artist"><%=song.artist%></p>
+          <!-- END SONG INFO -->
+
+          <!-- PLAYER CONTROLS -->
+          <div class="row">
+            <div class="col-md-4">
+              <p id="plays"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <%=song.numPlays%> <span class="glyphicon glyphicon-pause" aria-hidden="true"></span></p>
+            </div>
+          </div>
+          <!-- END PLAYER CONTROLS -->
+
+        </div> <!-- THIS CLOSES THE SECOND COLUMN -->
+
+      </div> <!-- THIS CLOSES THE ROW -->
+      <%end%>
+    </div> <!-- THIS CLOSES THE CONTAINER -->
+  </body>
+</html>
