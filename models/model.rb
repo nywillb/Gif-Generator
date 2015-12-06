@@ -1,6 +1,13 @@
-class Song
+require 'giphy'
+
+Giphy::Configuration.configure do |config|
+  config.version = v1
+  config.api_key = dc6zaTOxFJmzC
+end
+
+class Gif
   #these are all the attributes of the song
-  attr_accessor :name, :genre, :artist, :numPlays, :albumArt, :album
+  attr_accessor :name, :gif
 
   def initialize(song_name)
     #this is run when we use Song.new
