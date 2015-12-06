@@ -1,0 +1,39 @@
+<<<<<<< HEAD
+/usr/local/opt/rbenv/versions/2.1.5/bin/ruby -r ./siteconf20151206-12099-1sh49t6.rb extconf.rb
+=======
+/usr/local/opt/rbenv/versions/2.1.5/bin/ruby -r ./siteconf20151206-14371-oscnor.rb extconf.rb
+>>>>>>> bb7a591af31e374b209e654f524dbbf17059729b
+>>>>> Creating Makefile for ruby version 2.1.5 on x86_64-linux <<<<<
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling strict.c
+compiling hash.c
+compiling resolve.c
+compiling dump.c
+compiling odd.c
+compiling parse.c
+compiling reader.c
+compiling val_stack.c
+compiling object.c
+compiling compat.c
+compiling circarray.c
+compiling hash_test.c
+compiling fast.c
+compiling err.c
+compiling saj.c
+compiling oj.c
+compiling scp.c
+compiling sparse.c
+compiling cache8.c
+linking shared-object oj/oj.so
+
+make "DESTDIR=" install
+<<<<<<< HEAD
+/usr/bin/install -c -m 0755 oj.so ./.gem.20151206-12099-1fwoej1/oj
+=======
+/usr/bin/install -c -m 0755 oj.so ./.gem.20151206-14371-110dw9z/oj
+>>>>>>> bb7a591af31e374b209e654f524dbbf17059729b
+installing default oj libraries
