@@ -1,4 +1,4 @@
-/usr/local/opt/rbenv/versions/2.1.5/bin/ruby -r ./siteconf20151206-12099-1sh49t6.rb extconf.rb
+/usr/local/opt/rbenv/versions/2.1.5/bin/ruby -r ./siteconf20151206-14371-oscnor.rb extconf.rb
 >>>>> Creating Makefile for ruby version 2.1.5 on x86_64-linux <<<<<
 creating Makefile
 
@@ -27,5 +27,5 @@ compiling cache8.c
 linking shared-object oj/oj.so
 
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 oj.so ./.gem.20151206-12099-1fwoej1/oj
+/usr/bin/install -c -m 0755 oj.so ./.gem.20151206-14371-110dw9z/oj
 installing default oj libraries

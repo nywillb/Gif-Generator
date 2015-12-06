@@ -30,8 +30,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20151206-12099-1fwoej1
-sitelibdir = $(DESTDIR)./.gem.20151206-12099-1fwoej1
+sitearchdir = $(DESTDIR)./.gem.20151206-14371-110dw9z
+sitelibdir = $(DESTDIR)./.gem.20151206-14371-110dw9z
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -72,7 +72,7 @@ empty =
 OUTFLAG = -o $(empty)
 COUTFLAG = -o $(empty)
 
-RUBY_EXTCONF_H = 
+RUBY_EXTCONF_H =
 cflags   =  $(optflags) $(debugflags) $(warnflags)
 optflags = -O3 -fno-fast-math
 debugflags = -ggdb3
@@ -80,21 +80,21 @@ warnflags = -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long 
 CCDLFLAGS = -fPIC
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -fPIC $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
-DEFS     = 
+DEFS     =
 CPPFLAGS =   $(DEFS) $(cppflags) -DRUBY_TYPE=ruby -DRUBY_RUBY -DRUBY_VERSION=2.1.5 -DRUBY_VERSION_MAJOR=2 -DRUBY_VERSION_MINOR=1 -DRUBY_VERSION_MICRO=5 -DHAS_RB_TIME_TIMESPEC=1 -DHAS_ENCODING_SUPPORT=1 -DHAS_NANO_TIME=1 -DHAS_IVAR_HELPERS=1 -DHAS_EXCEPTION_MAGIC=1 -DHAS_PROC_WITH_BLOCK=1 -DHAS_TOP_LEVEL_ST_H=0 -DNEEDS_RATIONAL=0 -DIS_WINDOWS=0 -DUSE_PTHREAD_MUTEX=1 -DUSE_RB_MUTEX=0 -DDATETIME_1_8=0 -DNO_TIME_ROUND_PAD=0 -Wall
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
 ldflags  = -L. -fstack-protector -rdynamic -Wl,-export-dynamic
-dldflags =  
-ARCH_FLAG = 
+dldflags =
+ARCH_FLAG =
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -shared
 LDSHAREDXX = $(CXX) -shared
 AR = ar
-EXEEXT = 
+EXEEXT =
 
 RUBY_INSTALL_NAME = ruby
 RUBY_SO_NAME = ruby
-RUBYW_INSTALL_NAME = 
+RUBYW_INSTALL_NAME =
 RUBY_VERSION_NAME = $(RUBY_BASE_NAME)-$(ruby_version)
 RUBYW_BASE_NAME = rubyw
 RUBY_BASE_NAME = ruby
@@ -118,31 +118,31 @@ TOUCH = exit >
 
 #### End of system configuration section. ####
 
-preload = 
+preload =
 
 libpath = . $(libdir)
 LIBPATH =  -L. -L$(libdir) -Wl,-R$(libdir)
-DEFFILE = 
+DEFFILE =
 
 CLEANFILES = mkmf.log
-DISTCLEANFILES = 
-DISTCLEANDIRS = 
+DISTCLEANFILES =
+DISTCLEANDIRS =
 
-extout = 
-extout_prefix = 
+extout =
+extout_prefix =
 target_prefix = /oj
-LOCAL_LIBS = 
+LOCAL_LIBS =
 LIBS = $(LIBRUBYARG_SHARED)  -lpthread -ldl -lcrypt -lm   -lc
 ORIG_SRCS = strict.c hash.c resolve.c dump.c odd.c parse.c reader.c val_stack.c object.c compat.c circarray.c hash_test.c fast.c err.c saj.c oj.c scp.c sparse.c cache8.c
-SRCS = $(ORIG_SRCS) 
+SRCS = $(ORIG_SRCS)
 OBJS = strict.o hash.o resolve.o dump.o odd.o parse.o reader.o val_stack.o object.o compat.o circarray.o hash_test.o fast.o err.o saj.o oj.o scp.o sparse.o cache8.o
 HDRS = $(srcdir)/hash.h $(srcdir)/parse.h $(srcdir)/odd.h $(srcdir)/val_stack.h $(srcdir)/buf.h $(srcdir)/resolve.h $(srcdir)/reader.h $(srcdir)/cache8.h $(srcdir)/oj.h $(srcdir)/err.h $(srcdir)/encode.h $(srcdir)/circarray.h
 TARGET = oj
 TARGET_NAME = oj
 TARGET_ENTRY = Init_$(TARGET_NAME)
 DLLIB = $(TARGET).so
-EXTSTATIC = 
-STATIC_LIB = 
+EXTSTATIC =
+STATIC_LIB =
 
 TIMESTAMP_DIR = .
 BINDIR        = $(bindir)
@@ -153,7 +153,7 @@ HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix)
 ARCHHDRDIR    = $(rubyhdrdir)/$(arch)/ruby$(target_prefix)
 
 TARGET_SO     = $(DLLIB)
-CLEANLIBS     = $(TARGET).so 
+CLEANLIBS     = $(TARGET).so
 CLEANOBJS     = *.o  *.bak
 
 all:    $(DLLIB)
