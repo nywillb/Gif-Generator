@@ -16,6 +16,7 @@ class MyApp < Sinatra::Base
       puts value
       result = Giphy.translate(value)
       puts result[0]
+      value
     end
     puts""
   end
