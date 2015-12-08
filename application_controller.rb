@@ -16,8 +16,9 @@ class MyApp < Sinatra::Base
       puts value
       result = Giphy.translate(value)
       puts result[0]
+      result_hash = JSON.parse(result)
+      puts result_hash
     end
     puts""
   end
 end
-
