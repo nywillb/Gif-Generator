@@ -15,7 +15,8 @@ class MyApp < Sinatra::Base
     text.each do |value|
       puts value
       result = Giphy.translate(value)
-      puts result[0][:data][:original][:url]
+      puts result.url
+      #puts result.inspect
       #result_hash = JSON.parse(result[0])
       #puts result_hash
     end
