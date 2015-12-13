@@ -8,18 +8,20 @@ class MyApp < Sinatra::Base
   end
 
   post '/translate' do
-    puts ""
-    puts params[:text]
-    puts "==================================================="
     text = params[:text].split(" ")
+    @resultUrls=[]
     text.each do |value|
-      puts value
-      result = Giphy.translate(value)
-      puts result.url
-      #puts result.inspect
-      #result_hash = JSON.parse(result[0])
-      #puts result_hash
+      result = Giphy.search(value)
+      if result.length == 0
+        @resultUrls.push(value)
+      else
+        @resultUrls.push("http://i.giphy.com/" + result[rand(0...result.length)].id + ".gif")
+      end
+      # # result = "http://i.giphy.com/" + Giphy.search(value)[0
+      # puts result
+      # # .id + ".gif"
+      # # @resultUrls.push(url)
     end
-    puts""
+    erb :results
   end
 end

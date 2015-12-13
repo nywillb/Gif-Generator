@@ -43,7 +43,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Gif Time</h3>
+              <a href="/"><h3 class="masthead-brand">Gif Time</h3></a>
             </div>
           </div>
 
@@ -51,14 +51,19 @@
             <h1 class="cover-heading">GIF your life.</h1>
             <p class="lead">Translate text into GIFs to <strong>GIF your life.</strong></p>
             <p class="lead">
-              <form action="/translate" method="post">
-                <input type="text" name="text">
-                <input type="submit" class="btn btn-lg btn-primary" value="Translate It!" name="submit">
-              </form>
+              <%@resultUrls.each do |gif|%>
+                <%if !gif.start_with?('http://i.giphy.com/')%>
+                <%=gif.to_s%>
+                <%else%>
+                <img src=<%=gif.to_s%> height=125px>
+                <%end%>
+              <%end%>
             </p>
           </div>
 
           <div class="mastfoot">
+            <div class="inner">
+            </div>
           </div>
 
         </div>
